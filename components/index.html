@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sprint 01</title>
+    <link rel="stylesheet" href="./reset.css" />
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100&display=swap"
+      rel="stylesheet"
+    />
+    <link rel=”stylesheet” href=”https://fonts.googleapis.com/icon?family=Material+Icons”>
+  </head>
+  <body>
+    <header>
+      <h1>Challenge 01</h1>
+      <img class="logo" src="/assets/Logo.png" alt="logo de alura " />
+    </header>
+    <main>
+      <section class="section-1">
+        <div class="box">
+          <input
+            class="box_text"
+            type="text"
+            placeholder="Ingrese el texto aqui"
+          />
+        </div>
+        <div class="message">
+          <img src="/assets/alert.png" alt="signo de alerta" />
+          <p>Solo letras minusculas y sin acentos</p>
+        </div>
+        <div class="btn">
+          <button type="submit" class="btn-e" value="Encriptar">
+            Encriptar
+          </button>
+          <button type="submit" class="btn-d" value="Desencriptar">
+            Desencriptar
+          </button>
+        </div>
+      </section>
+      <section class="section-2">
+        <div class="box-img">
+          <img src="/assets/Muñeco.png" alt="Muñeco" />
+        </div>
+        <div class="box-label">
+          <label>Ningun Mensaje fue ingresado</label>
+          <p>Ingresa el texto que deseas encriptar o desencriptar</p>
+        </div>
+        <div class="btn-copy">
+          <button type="submit" class="btn-c" value="Copiar" onclick="limpiar()">Copiar</button>
+        </div>
+        <div class="box-result">
+          <p class="result" id="r"></p>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <p>&copy; Fernando Macas</p>
+      <p>Mis redes sociales: </p>
+      <a href="https://www.instagram.com/fercho.jma">Instagram</a>
+      <a href="https://www.linkedin.com/in/fernando-macas-b86311174">Linkedln</a>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>
