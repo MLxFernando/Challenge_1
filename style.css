@@ -1,3 +1,50 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+/*Css Proyecto*/
+
 body{
     background-color: #f4f4fc;
     height: 100vh;
@@ -27,21 +74,20 @@ h1{
 
 main{
     display:flex;
-    justify-content: space-between;
-    flex-wrap: nowrap;
+    justify-content: space-between; 
+    /*flex-wrap: nowrap; */
     height: 80%;
 }
 
 .section-1{
-    display: flex;
+    display: inherit;
     flex-direction: column;
-    justify-content: flex-end;
 }
 
 .box{
     height: 100%;
-    display: flex;
-    justify-content: center;
+    display: inherit;
+    margin: auto;
 }
 
 .box_text{
@@ -53,11 +99,13 @@ main{
     border: none;
     padding: 20px;
     text-transform: lowercase;
+    outline: none;
 }
 
 .box_text::placeholder{
     color:#0A3871;
 }
+
 
 .message{
     padding: 20px 0 0 20px;
@@ -170,10 +218,6 @@ label{
     font-size: 30px;
 }
 
-.btn-copy{
-    display: flex;
-}
-
 .btn-c{
     width: 328px;
     height: 67px;
@@ -186,7 +230,6 @@ label{
     border: 1px solid #0A3871;
     cursor: pointer;
     position: relative;
-    order: 2;
 }
 
 .ocultar{
@@ -213,7 +256,91 @@ a:hover{
     color: silver;
 }
 
-@media (max-width: 875px){
+/*Responsive Telefonos*/
+
+@media (max-width: 360px) {
+
+    .box_text{
+        padding: 0;
+        width: 280px;
+    }
+    .btn-c, .btn-d, .btn-e{
+        width: 320px;
+    }
+    .btn{
+        padding: 0;
+        flex-direction: column;
+    }
+    main{
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+    }
+    .box-img, .logo{
+        display: none;
+    }
+    .section-1, .section-2{
+        align-items: flex-start;
+    }
+    .btn-copy, section{
+        padding: 0;
+    }
+}
+  
+
+@media(min-width: 361px) and (max-width: 410px) {
+    
+    main{
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .box_text{
+        padding: 0;
+        width: 350px;
+    }
+
+    .btn{
+        padding: 10px 0 0 10px;
+        flex-direction: column;
+    }
+    .box-img, .logo{
+        display: none;
+    }
+    .section-1, .section-2{
+        align-items: flex-start;
+    }
+    .btn-copy, section{
+        padding: 0;
+    }
+}
+
+@media(min-width: 411px) and (max-width: 480px) {
+    main{
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+    }
+    .btn{
+        flex-direction: column;
+    }
+    .box-img, .logo{
+        display: none;
+    }
+    .section-1, .section-2{
+        align-items: flex-start;
+    }
+    .btn-copy, section{
+        padding-left: 10px;
+    }
+    .box_text{
+        padding: 20px;
+        width: 350px;
+    }
+}
+
+@media (min-width: 481px) and (max-width: 767px) {
     main{
         flex-wrap: wrap;
         align-items: center;
@@ -226,13 +353,54 @@ a:hover{
         display: none;
     }
     .section-1, .section-2{
-        width: 100%;
-        align-items: flex-start;
+        align-items: center;
     }
     .btn-copy, section{
         padding: 0;
     }
+    .section-2{
+        width: 520px;
+    }
 }
 
+@media (min-width: 768px) and (max-width: 991px) {
+    main{
+        align-items: center;
+        justify-content: center;
+    }
+    .btn{
+        flex-direction: column;
+    }
+    .section-1, .section-2{
+        align-items: center;
+    }
+    .btn-copy, section{
+        padding: 0;
+    }
+    .section-2{
+        width: 420px;
+    }
+}
+
+
+@media (min-width: 992px) and (max-width: 1199px) {
+    main{
+        align-items: center;
+        justify-content: center;
+    }
+    .btn{
+        flex-direction: column;
+    }
+    .section-1, .section-2{
+        align-items: center;
+    }
+    .btn-copy, section{
+        padding: 0;
+    }
+    
+}
+  
+  
+  
 
 
